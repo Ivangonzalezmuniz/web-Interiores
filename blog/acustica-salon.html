@@ -70,11 +70,89 @@
 
     <main>
         <article class="blog-articulo">
-            <!-- Hero del artículo -->
+            <!-- Hero del artículo con SVG decorativo -->
             <div class="articulo-hero">
-                <div class="articulo-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 50%, #c9a96e 100%);">
-                    <i class="fas fa-volume-up"></i>
-                </div>
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                    <defs>
+                        <linearGradient id="fondo" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1a1a2e"/>
+                            <stop offset="50%" style="stop-color:#2c3e50"/>
+                            <stop offset="100%" style="stop-color:#c9a96e"/>
+                        </linearGradient>
+                        <linearGradient id="onda1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#c9a96e;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                        </linearGradient>
+                        <linearGradient id="onda2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#f0d78c;stop-opacity:0.6"/>
+                            <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                        </linearGradient>
+                        <linearGradient id="onda3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#c9a96e;stop-opacity:0.4"/>
+                            <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Fondo -->
+                    <rect width="800" height="400" fill="url(#fondo)"/>
+                    <!-- Círculos decorativos -->
+                    <circle cx="650" cy="80" r="120" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                    <circle cx="650" cy="80" r="80" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    <circle cx="150" cy="320" r="90" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                    <circle cx="150" cy="320" r="60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                    <!-- Ondas sonoras centrales -->
+                    <g filter="url(#glow)">
+                        <path d="M 100 200 Q 200 120 400 200 T 700 200" fill="none" stroke="url(#onda1)" stroke-width="3"/>
+                        <path d="M 130 200 Q 230 140 400 200 T 670 200" fill="none" stroke="url(#onda2)" stroke-width="2.5"/>
+                        <path d="M 160 200 Q 260 160 400 200 T 640 200" fill="none" stroke="url(#onda3)" stroke-width="2"/>
+                        <line x1="80" y1="200" x2="720" y2="200" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+                    </g>
+                    <!-- Altavoz L -->
+                    <g transform="translate(160, 145)">
+                        <rect x="0" y="0" width="45" height="70" rx="5" fill="#2c3e50" stroke="#c9a96e" stroke-width="1.5"/>
+                        <circle cx="22" cy="20" r="12" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                        <circle cx="22" cy="20" r="5" fill="#c9a96e" opacity="0.7"/>
+                        <circle cx="22" cy="48" r="8" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                        <circle cx="22" cy="48" r="3.5" fill="#c9a96e" opacity="0.5"/>
+                        <rect x="11" y="70" width="23" height="7" rx="2" fill="#c9a96e" opacity="0.4"/>
+                    </g>
+                    <!-- Altavoz R -->
+                    <g transform="translate(595, 145)">
+                        <rect x="0" y="0" width="45" height="70" rx="5" fill="#2c3e50" stroke="#c9a96e" stroke-width="1.5"/>
+                        <circle cx="22" cy="20" r="12" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                        <circle cx="22" cy="20" r="5" fill="#c9a96e" opacity="0.7"/>
+                        <circle cx="22" cy="48" r="8" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                        <circle cx="22" cy="48" r="3.5" fill="#c9a96e" opacity="0.5"/>
+                        <rect x="11" y="70" width="23" height="7" rx="2" fill="#c9a96e" opacity="0.4"/>
+                    </g>
+                    <!-- Sofá + oyente -->
+                    <g transform="translate(365, 240)" filter="url(#glow)">
+                        <rect x="0" y="12" width="70" height="22" rx="7" fill="#c9a96e" opacity="0.3"/>
+                        <rect x="-4" y="0" width="18" height="34" rx="5" fill="#c9a96e" opacity="0.25"/>
+                        <rect x="56" y="0" width="18" height="34" rx="5" fill="#c9a96e" opacity="0.25"/>
+                        <circle cx="35" cy="-6" r="9" fill="#c9a96e" opacity="0.5"/>
+                    </g>
+                    <!-- Notas musicales -->
+                    <g fill="#c9a96e" opacity="0.4">
+                        <text x="280" y="130" font-size="18" font-family="serif">♪</text>
+                        <text x="500" y="135" font-size="14" font-family="serif">♫</text>
+                        <text x="310" y="290" font-size="12" font-family="serif">♪</text>
+                        <text x="470" y="285" font-size="16" font-family="serif">♩</text>
+                    </g>
+                    <!-- Título -->
+                    <text x="400" y="368" text-anchor="middle" font-family="'Playfair Display', serif" font-size="26" fill="white" font-weight="700" letter-spacing="2">Diseño Acústico en el Salón</text>
+                    <line x1="220" y1="378" x2="580" y2="378" stroke="#c9a96e" stroke-width="1" opacity="0.4"/>
+                    <text x="400" y="393" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" letter-spacing="2">CÓMO COLOCAR LOS ALTAVOCES Y CREAR UN SONIDO EQUILIBRADO</text>
+                </svg>
             </div>
             
             <div class="articulo-content">
@@ -110,7 +188,7 @@
                         <!-- Sección 1: Importancia -->
                         <h2>La importancia de la acústica en el salón</h2>
                         <p>Cada salón tiene su propia <strong>personalidad sonora</strong>. La forma del espacio, los materiales, los muebles y hasta la decoración influyen en cómo se comporta el sonido. Si no se controla, aparecen problemas como:</p>
-                        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                        <ul>
                             <li>Voces poco claras</li>
                             <li>Graves descontrolados</li>
                             <li>Ecos molestos</li>
@@ -118,7 +196,7 @@
                         </ul>
                         <p>La buena noticia es que <strong>no hace falta convertir el salón en un estudio de grabación</strong>. Con unas pocas decisiones bien pensadas, se puede lograr un ambiente acústico cómodo y equilibrado.</p>
                         
-                        <!-- Sección 2: Elíptica de escucha (con diagrama SVG) -->
+                        <!-- Sección 2: Elíptica de escucha -->
                         <h2>La elíptica de escucha: la base de una buena colocación</h2>
                         <p>Para que un sistema de audio funcione correctamente, la colocación de los altavoces debe seguir una geometría sencilla: <strong>la elíptica de escucha</strong>.</p>
                         
@@ -129,105 +207,84 @@
                         <div class="articulo-diagrama">
                             <h4>Diagrama: Elíptica de escucha</h4>
                             <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
-                                <!-- Fondo -->
                                 <rect width="800" height="500" fill="#faf9f6" rx="8"/>
-                                <!-- Pared trasera -->
                                 <rect x="50" y="50" width="700" height="15" fill="#e0d5c0" rx="2"/>
                                 <text x="400" y="42" text-anchor="middle" font-size="12" fill="#999">Pared trasera</text>
-                                <!-- Suelo -->
                                 <rect x="50" y="430" width="700" height="20" fill="#e0d5c0" rx="2"/>
-                                <!-- Elipse -->
                                 <ellipse cx="400" cy="280" rx="250" ry="180" fill="none" stroke="#c9a96e" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
                                 <text x="660" y="160" font-size="11" fill="#c9a96e" font-style="italic">Elíptica de escucha</text>
-                                <!-- Altavoz Izquierdo (L) -->
                                 <rect x="155" y="250" width="40" height="60" rx="4" fill="#1a1a2e"/>
                                 <circle cx="175" cy="265" r="10" fill="#c9a96e" opacity="0.7"/>
                                 <circle cx="175" cy="290" r="6" fill="#c9a96e" opacity="0.4"/>
                                 <text x="175" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a2e">L</text>
                                 <text x="175" y="345" text-anchor="middle" font-size="9" fill="#999">Frontal Izq.</text>
-                                <!-- Altavoz Derecho (R) -->
                                 <rect x="605" y="250" width="40" height="60" rx="4" fill="#1a1a2e"/>
                                 <circle cx="625" cy="265" r="10" fill="#c9a96e" opacity="0.7"/>
                                 <circle cx="625" cy="290" r="6" fill="#c9a96e" opacity="0.4"/>
                                 <text x="625" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a2e">R</text>
                                 <text x="625" y="345" text-anchor="middle" font-size="9" fill="#999">Frontal Der.</text>
-                                <!-- Oyente -->
                                 <circle cx="400" cy="380" r="18" fill="#c9a96e"/>
                                 <text x="400" y="385" text-anchor="middle" font-size="14" fill="white">👤</text>
                                 <text x="400" y="415" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">OYENTE</text>
                                 <text x="400" y="428" text-anchor="middle" font-size="8" fill="#999">Punto dulce</text>
-                                <!-- Distancias -->
                                 <line x1="195" y1="268" x2="380" y2="370" stroke="#c9a96e" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
                                 <line x1="605" y1="268" x2="420" y2="370" stroke="#c9a96e" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
                                 <text x="270" y="310" text-anchor="middle" font-size="9" fill="#999">Distancia = d</text>
                                 <text x="530" y="310" text-anchor="middle" font-size="9" fill="#999">Distancia = d</text>
-                                <!-- Separación -->
                                 <line x1="175" y1="240" x2="625" y2="240" stroke="#1a1a2e" stroke-width="1"/>
                                 <text x="400" y="233" text-anchor="middle" font-size="10" fill="#1a1a2e">2 - 3 metros</text>
-                                <!-- Altura tweeter -->
                                 <text x="400" y="470" text-anchor="middle" font-size="10" fill="#999">Altura del tweeter = altura de los oídos sentado (~90-110 cm)</text>
                             </svg>
                         </div>
                         
                         <h3>Distancias recomendadas</h3>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                        <ul>
                             <li><strong>Separación entre altavoces frontales:</strong> 2 a 3 metros</li>
                             <li><strong>Distancia del oyente a cada altavoz:</strong> similar a la separación entre ellos</li>
                             <li><strong>Altura del tweeter:</strong> a la altura de tus oídos cuando estás sentado</li>
                         </ul>
                         <p>Esta configuración es la base para que cualquier sistema de audio, por sencillo que sea, funcione correctamente.</p>
                         
-                        <!-- Sección 3: Tipos de altavoces (con diagrama) -->
+                        <!-- Sección 3: Tipos de altavoces -->
                         <h2>Tipos de altavoces y su función en el salón</h2>
                         
-                        <!-- Diagrama SVG: Configuración 5.1 -->
                         <div class="articulo-diagrama">
                             <h4>Diagrama: Configuración recomendada 5.1</h4>
                             <svg viewBox="0 0 800 550" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
                                 <rect width="800" height="550" fill="#faf9f6" rx="8"/>
-                                <!-- Paredes -->
                                 <rect x="40" y="40" width="720" height="12" fill="#ddd" rx="2"/>
                                 <rect x="40" y="40" width="12" height="470" fill="#ddd" rx="2"/>
                                 <rect x="748" y="40" width="12" height="470" fill="#ddd" rx="2"/>
                                 <rect x="40" y="498" width="720" height="12" fill="#ddd" rx="2"/>
                                 <text x="400" y="28" text-anchor="middle" font-size="10" fill="#999">Pared frontal (TV)</text>
-                                <!-- TV -->
                                 <rect x="330" y="55" width="140" height="8" fill="#1a1a2e" rx="2"/>
                                 <text x="400" y="80" text-anchor="middle" font-size="9" fill="#666">TV / Pantalla</text>
-                                <!-- Altavoz Central (C) -->
                                 <rect x="370" y="88" width="60" height="25" rx="3" fill="#c9a96e"/>
                                 <text x="400" y="104" text-anchor="middle" font-size="9" fill="white" font-weight="bold">CENTRAL</text>
                                 <text x="400" y="125" text-anchor="middle" font-size="8" fill="#999">Bajo la TV</text>
-                                <!-- Altavoz L -->
                                 <rect x="130" y="180" width="45" height="70" rx="5" fill="#1a1a2e"/>
                                 <circle cx="152" cy="200" r="14" fill="#c9a96e" opacity="0.6"/>
                                 <text x="152" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">L</text>
                                 <text x="152" y="285" text-anchor="middle" font-size="8" fill="#999">Frontal Izq.</text>
-                                <!-- Altavoz R -->
                                 <rect x="625" y="180" width="45" height="70" rx="5" fill="#1a1a2e"/>
                                 <circle cx="647" cy="200" r="14" fill="#c9a96e" opacity="0.6"/>
                                 <text x="647" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">R</text>
                                 <text x="647" y="285" text-anchor="middle" font-size="8" fill="#999">Frontal Der.</text>
-                                <!-- Oyente -->
                                 <circle cx="400" cy="370" r="20" fill="#c9a96e"/>
                                 <text x="400" y="376" text-anchor="middle" font-size="16" fill="white">👤</text>
                                 <text x="400" y="405" text-anchor="middle" font-size="9" font-weight="bold" fill="#1a1a2e">OYENTE</text>
-                                <!-- Surround SL -->
                                 <rect x="70" y="380" width="35" height="50" rx="4" fill="#1a1a2e" opacity="0.7"/>
                                 <text x="87" y="415" text-anchor="middle" font-size="9" fill="white" font-weight="bold">SL</text>
                                 <text x="87" y="445" text-anchor="middle" font-size="7" fill="#999">Surround Izq.</text>
                                 <text x="87" y="458" text-anchor="middle" font-size="7" fill="#999">1.8-2m altura</text>
-                                <!-- Surround SR -->
                                 <rect x="695" y="380" width="35" height="50" rx="4" fill="#1a1a2e" opacity="0.7"/>
                                 <text x="712" y="415" text-anchor="middle" font-size="9" fill="white" font-weight="bold">SR</text>
                                 <text x="712" y="445" text-anchor="middle" font-size="7" fill="#999">Surround Der.</text>
                                 <text x="712" y="458" text-anchor="middle" font-size="7" fill="#999">1.8-2m altura</text>
-                                <!-- Subwoofer -->
                                 <rect x="570" y="410" width="50" height="50" rx="4" fill="#1a1a2e"/>
                                 <text x="595" y="435" text-anchor="middle" font-size="8" fill="white" font-weight="bold">SW</text>
                                 <text x="595" y="448" text-anchor="middle" font-size="7" fill="#c9a96e">Subwoofer</text>
                                 <text x="595" y="475" text-anchor="middle" font-size="7" fill="#999">Esquina o pared</text>
-                                <!-- Líneas de la elipse -->
                                 <ellipse cx="400" cy="280" rx="200" ry="140" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.4"/>
                             </svg>
                         </div>
@@ -243,47 +300,38 @@
                         
                         <h3>Subwoofer (LFE)</h3>
                         <p>Reproduce las frecuencias graves. Su colocación es flexible, pero suele funcionar bien:</p>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                        <ul>
                             <li>En una esquina (más presión sonora)</li>
                             <li>A mitad de pared (más control)</li>
                             <li>Cerca del frontal (más integración)</li>
                         </ul>
                         
-                        <!-- Sección 4: Reflexiones (con diagrama) -->
+                        <!-- Sección 4: Reflexiones -->
                         <h2>Cómo funcionan las reflexiones acústicas</h2>
                         <p>El sonido no solo llega directo desde los altavoces: también rebota en paredes, techo, suelo y muebles. Estas reflexiones pueden mejorar o empeorar la experiencia.</p>
                         
-                        <!-- Diagrama SVG: Reflexiones -->
                         <div class="articulo-diagrama">
                             <h4>Diagrama: Reflexiones acústicas en el salón</h4>
                             <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
                                 <rect width="800" height="400" fill="#faf9f6" rx="8"/>
-                                <!-- Paredes -->
                                 <rect x="30" y="30" width="740" height="10" fill="#ddd" rx="2"/>
                                 <rect x="30" y="360" width="740" height="10" fill="#ddd" rx="2"/>
                                 <rect x="30" y="30" width="10" height="340" fill="#ddd" rx="2"/>
                                 <rect x="760" y="30" width="10" height="340" fill="#ddd" rx="2"/>
-                                <!-- Altavoz -->
                                 <rect x="100" y="180" width="40" height="60" rx="4" fill="#1a1a2e"/>
                                 <text x="120" y="260" text-anchor="middle" font-size="10" fill="#1a1a2e" font-weight="bold">L</text>
-                                <!-- Oyente -->
                                 <circle cx="500" cy="200" r="16" fill="#c9a96e"/>
                                 <text x="500" y="206" text-anchor="middle" font-size="13" fill="white">👤</text>
-                                <!-- Sonido directo -->
                                 <line x1="140" y1="200" x2="484" y2="195" stroke="#2ecc71" stroke-width="2.5"/>
                                 <text x="310" y="188" text-anchor="middle" font-size="9" fill="#2ecc71" font-weight="bold">Sonido directo ✓</text>
-                                <!-- Reflexión primaria (suelo) -->
                                 <line x1="140" y1="220" x2="300" y2="350" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
                                 <line x1="300" y1="350" x2="484" y2="205" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
                                 <text x="220" y="340" text-anchor="middle" font-size="8" fill="#e74c3c">Reflexión suelo</text>
-                                <!-- Reflexión primaria (pared lateral) -->
                                 <line x1="140" y1="190" x2="35" y2="140" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="5,3"/>
                                 <line x1="35" y1="140" x2="484" y2="190" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="5,3"/>
                                 <text x="60" y="130" font-size="8" fill="#e67e22">Reflexión pared</text>
-                                <!-- Alfombra -->
                                 <rect x="280" y="345" width="250" height="12" fill="#c9a96e" rx="3" opacity="0.6"/>
                                 <text x="405" y="355" text-anchor="middle" font-size="8" fill="white">Alfombra (absorción)</text>
-                                <!-- Cortina -->
                                 <rect x="28" y="60" width="8" height="200" fill="#8e44ad" rx="2" opacity="0.4"/>
                                 <text x="18" y="260" font-size="7" fill="#8e44ad" transform="rotate(-90, 18, 260)">Cortina gruesa</text>
                             </svg>
@@ -296,7 +344,7 @@
                         <p>Son rebotes múltiples que generan reverberación. Si son excesivas, el sonido pierde definición.</p>
                         
                         <h3>Cómo controlarlas de forma sencilla</h3>
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                        <ul>
                             <li><strong>Alfombras</strong> para reducir reflexiones del suelo</li>
                             <li><strong>Cortinas gruesas</strong> para controlar las paredes laterales</li>
                             <li><strong>Muebles y estanterías</strong> para difundir el sonido</li>
@@ -307,39 +355,31 @@
                         <!-- Sección 5: Reglas prácticas -->
                         <h2>Reglas prácticas para un salón real</h2>
                         
-                        <!-- Diagrama SVG: Distancias recomendadas -->
                         <div class="articulo-diagrama">
                             <h4>Diagrama: Distancias recomendadas</h4>
                             <svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
                                 <rect width="700" height="350" fill="#faf9f6" rx="8"/>
-                                <!-- Pared trasera -->
                                 <rect x="20" y="20" width="660" height="10" fill="#ddd" rx="2"/>
                                 <text x="350" y="15" text-anchor="middle" font-size="9" fill="#999">Pared trasera</text>
-                                <!-- Altavoz -->
                                 <rect x="80" y="120" width="50" height="80" rx="5" fill="#1a1a2e"/>
                                 <text x="105" y="230" text-anchor="middle" font-size="10" fill="white">L</text>
-                                <!-- Distancia a pared -->
                                 <line x1="130" y1="100" x2="130" y2="30" stroke="#c9a96e" stroke-width="1.5"/>
                                 <line x1="125" y1="30" x2="135" y2="30" stroke="#c9a96e" stroke-width="1"/>
                                 <line x1="125" y1="100" x2="135" y2="100" stroke="#c9a96e" stroke-width="1"/>
                                 <text x="155" y="68" font-size="9" fill="#c9a96e" font-weight="bold">20-40 cm</text>
-                                <!-- Mueble cerrado con X -->
                                 <rect x="450" y="250" width="100" height="70" rx="4" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-                                <text x="500" y="280" text-anchor="middle" font-size="9" fill="#999">Mueble</text>
-                                <text x="500" y="295" text-anchor="middle" font-size="9" fill="#999">cerrado</text>
+                                <text x="500" y="280" text-anchor="middle" font-size="9" fill="#999">Mueble cerrado</text>
                                 <line x1="460" y1="260" x2="540" y2="310" stroke="#e74c3c" stroke-width="2"/>
                                 <line x1="540" y1="260" x2="460" y2="310" stroke="#e74c3c" stroke-width="2"/>
                                 <text x="500" y="335" text-anchor="middle" font-size="8" fill="#e74c3c">No meter subwoofer</text>
-                                <!-- Subwoofer correcto -->
                                 <rect x="580" y="140" width="60" height="60" rx="4" fill="#1a1a2e"/>
                                 <text x="610" y="170" text-anchor="middle" font-size="8" fill="white">SW</text>
                                 <text x="610" y="220" text-anchor="middle" font-size="8" fill="#2ecc71">✓ Correcto</text>
-                                <!-- Simetría -->
                                 <text x="350" y="320" text-anchor="middle" font-size="10" fill="#1a1a2e">⟷ Mantener simetría entre altavoces frontales</text>
                             </svg>
                         </div>
                         
-                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                        <ul>
                             <li>Deja <strong>20–40 cm</strong> entre los altavoces y la pared trasera</li>
                             <li>Evita colocar el subwoofer dentro de un mueble cerrado</li>
                             <li>Mantén <strong>simetría</strong> entre los altavoces frontales</li>

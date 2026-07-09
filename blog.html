@@ -86,15 +86,87 @@
             </div>
         </div>
 
-        <!-- Artículo Destacado -->
+        <!-- Artículo Destacado con SVG de portada -->
         <section class="blog-destacado-section" id="blogDestacado">
             <div class="section-container">
                 <article class="blog-destacado" data-categoria="consejos">
                     <div class="blog-destacado-imagen">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 50%, #c9a96e 100%);">
-                            <i class="fas fa-volume-up"></i>
-                        </div>
-                        <span class="blog-categoria-badge">Consejos</span>
+                        <!-- SVG de portada acústica -->
+                        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                            <defs>
+                                <linearGradient id="fondoBlog" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1a1a2e"/>
+                                    <stop offset="50%" style="stop-color:#2c3e50"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e"/>
+                                </linearGradient>
+                                <linearGradient id="onda1b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                    <stop offset="50%" style="stop-color:#c9a96e;stop-opacity:0.8"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                </linearGradient>
+                                <linearGradient id="onda2b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                    <stop offset="50%" style="stop-color:#f0d78c;stop-opacity:0.6"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                </linearGradient>
+                                <linearGradient id="onda3b" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                    <stop offset="50%" style="stop-color:#c9a96e;stop-opacity:0.4"/>
+                                    <stop offset="100%" style="stop-color:#c9a96e;stop-opacity:0"/>
+                                </linearGradient>
+                                <filter id="glowb">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <rect width="800" height="450" fill="url(#fondoBlog)"/>
+                            <circle cx="650" cy="80" r="120" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                            <circle cx="150" cy="350" r="90" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                            <g filter="url(#glowb)">
+                                <path d="M 80 220 Q 200 130 400 220 T 720 220" fill="none" stroke="url(#onda1b)" stroke-width="3"/>
+                                <path d="M 110 220 Q 230 150 400 220 T 690 220" fill="none" stroke="url(#onda2b)" stroke-width="2.5"/>
+                                <path d="M 140 220 Q 260 170 400 220 T 660 220" fill="none" stroke="url(#onda3b)" stroke-width="2"/>
+                                <line x1="60" y1="220" x2="740" y2="220" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+                            </g>
+                            <!-- Altavoz L -->
+                            <g transform="translate(150, 160)">
+                                <rect x="0" y="0" width="45" height="70" rx="5" fill="#2c3e50" stroke="#c9a96e" stroke-width="1.5"/>
+                                <circle cx="22" cy="20" r="12" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                                <circle cx="22" cy="20" r="5" fill="#c9a96e" opacity="0.7"/>
+                                <circle cx="22" cy="48" r="8" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                                <circle cx="22" cy="48" r="3.5" fill="#c9a96e" opacity="0.5"/>
+                                <rect x="11" y="70" width="23" height="7" rx="2" fill="#c9a96e" opacity="0.4"/>
+                            </g>
+                            <!-- Altavoz R -->
+                            <g transform="translate(605, 160)">
+                                <rect x="0" y="0" width="45" height="70" rx="5" fill="#2c3e50" stroke="#c9a96e" stroke-width="1.5"/>
+                                <circle cx="22" cy="20" r="12" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                                <circle cx="22" cy="20" r="5" fill="#c9a96e" opacity="0.7"/>
+                                <circle cx="22" cy="48" r="8" fill="#1a1a2e" stroke="#c9a96e" stroke-width="1"/>
+                                <circle cx="22" cy="48" r="3.5" fill="#c9a96e" opacity="0.5"/>
+                                <rect x="11" y="70" width="23" height="7" rx="2" fill="#c9a96e" opacity="0.4"/>
+                            </g>
+                            <!-- Sofá + oyente -->
+                            <g transform="translate(370, 260)" filter="url(#glowb)">
+                                <rect x="0" y="12" width="70" height="22" rx="7" fill="#c9a96e" opacity="0.3"/>
+                                <rect x="-4" y="0" width="18" height="34" rx="5" fill="#c9a96e" opacity="0.25"/>
+                                <rect x="56" y="0" width="18" height="34" rx="5" fill="#c9a96e" opacity="0.25"/>
+                                <circle cx="35" cy="-6" r="9" fill="#c9a96e" opacity="0.5"/>
+                            </g>
+                            <!-- Notas -->
+                            <g fill="#c9a96e" opacity="0.4">
+                                <text x="280" y="145" font-size="18" font-family="serif">♪</text>
+                                <text x="510" y="150" font-size="14" font-family="serif">♫</text>
+                                <text x="310" y="310" font-size="12" font-family="serif">♪</text>
+                                <text x="480" y="305" font-size="16" font-family="serif">♩</text>
+                            </g>
+                            <!-- Título en la imagen -->
+                            <text x="400" y="390" text-anchor="middle" font-family="'Playfair Display', serif" font-size="28" fill="white" font-weight="700" letter-spacing="2">Diseño Acústico en el Salón</text>
+                            <line x1="200" y1="402" x2="600" y2="402" stroke="#c9a96e" stroke-width="1" opacity="0.4"/>
+                        </svg>
                     </div>
                     <div class="blog-destacado-content">
                         <div class="blog-meta">
@@ -242,7 +314,6 @@
                         </div>
                     </article>
                 </div>
-
             </div>
         </section>
 
@@ -340,15 +411,11 @@
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Quitar active de todos los botones
                 categoriaBtns.forEach(b => b.classList.remove('active'));
-                // Activar el botón clickeado
                 this.classList.add('active');
                 
-                // Obtener el filtro del atributo data-filtro
                 const filtro = this.getAttribute('data-filtro');
                 
-                // Si es "todos", mostrar todo incluido el destacado
                 if (filtro === 'todos') {
                     if (blogDestacado) {
                         blogDestacado.closest('.blog-destacado-section').style.display = 'block';
@@ -361,7 +428,6 @@
                     return;
                 }
                 
-                // Filtrar destacado
                 if (blogDestacado) {
                     const destacadoCategoria = blogDestacado.getAttribute('data-categoria');
                     if (destacadoCategoria === filtro) {
@@ -371,7 +437,6 @@
                     }
                 }
                 
-                // Filtrar tarjetas
                 blogCards.forEach(card => {
                     const categoria = card.getAttribute('data-categoria');
                     
