@@ -1,0 +1,395 @@
+/* ============ FILOSOFÍA ============ */
+.filosofia {
+    padding: 8rem 0;
+}
+
+.filosofia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.filosofia-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid #e8e4dd;
+    transition: var(--transition);
+    position: relative;
+}
+
+.filosofia-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+.filosofia-card:hover::before {
+    width: 50%;
+}
+
+.filosofia-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.filosofia-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.filosofia-card:hover .filosofia-icon {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: rotate(360deg);
+}
+
+.filosofia-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.filosofia-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* ============ SERVICIOS ============ */
+.servicios {
+    padding: 8rem 0;
+    background: var(--light-bg);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.servicio-card {
+    background: var(--white);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.servicio-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.servicio-imagen {
+    height: 200px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.servicio-card:hover .servicio-imagen {
+    background: var(--secondary-color);
+}
+
+.servicio-content {
+    padding: 2rem;
+}
+
+.servicio-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.servicio-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.servicio-lista {
+    list-style: none;
+}
+
+.servicio-lista li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.servicio-lista li::before {
+    content: '•';
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ============ PROYECTOS DESTACADOS (INDEX) ============ */
+.proyectos-destacados {
+    padding: 8rem 0;
+}
+
+.proyectos-destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.proyecto-destacado-card {
+    background: var(--white);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-destacado-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.proyecto-card-imagen {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.proyecto-imagen-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 5rem;
+    transition: all 0.5s ease;
+}
+
+.proyecto-destacado-card:hover .proyecto-imagen-placeholder {
+    transform: scale(1.1);
+}
+
+.proyecto-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.proyecto-destacado-card:hover .proyecto-card-overlay {
+    opacity: 1;
+}
+
+.proyecto-card-overlay span {
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    background: rgba(201, 169, 110, 0.2);
+}
+
+.proyecto-card-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.proyecto-card-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-ubicacion {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.proyecto-ubicacion i {
+    color: var(--secondary-color);
+    margin-right: 0.3rem;
+}
+
+.proyecto-descripcion {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* ============ PROCESO ============ */
+.proceso {
+    padding: 8rem 0;
+    background: var(--light-bg);
+}
+
+.proceso-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.proceso-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary-color);
+    opacity: 0.3;
+}
+
+.proceso-paso {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.proceso-paso:last-child {
+    margin-bottom: 0;
+}
+
+.paso-numero {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    flex-shrink: 0;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.proceso-paso:hover .paso-numero {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.paso-content {
+    padding-top: 1rem;
+}
+
+.paso-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.paso-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ============ TESTIMONIOS ============ */
+.testimonios {
+    padding: 8rem 0;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.testimonio-card {
+    background: var(--light-bg);
+    padding: 3rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.testimonio-card::before {
+    content: '"';
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: var(--secondary-color);
+    opacity: 0.2;
+    line-height: 1;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.testimonio-stars {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.testimonio-texto {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonio-autor strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.testimonio-autor span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}

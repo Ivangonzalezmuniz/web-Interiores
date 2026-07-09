@@ -1,0 +1,15 @@
+/* ============================================
+   LUMIA ESTUDIO - Archivo Principal
+   Importa todos los módulos CSS
+   ============================================ */
+
+@import 'base.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'componentes.css';
+@import 'secciones.css';
+@import 'proyectos.css';
+@import 'blog.css';
+@import 'contacto.css';
+@import 'footer.css';
+@import 'responsive.css';

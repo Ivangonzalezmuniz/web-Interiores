@@ -28,8 +28,18 @@ lumia-estudio/
 │   ├── materiales-sostenibles.html
 │   └── ... (más artículos)
 │
-├── css/
-│   └── style.css
+│   css/
+    ├── main.css          # Archivo principal que importa todos los 
+    ├── base.css          # Reset, variables, estilos base
+    ├── header.css        # Header y navegación
+    ├── hero.css          # Hero section
+    ├── componentes.css   # Botones, badges, tags, tarjetas
+    ├── secciones.css     # Filosofía, servicios, proceso, testimonios
+    ├── proyectos.css     # Lista de proyectos y detalle
+    ├── blog.css          # Blog
+    ├── contacto.css      # Contacto y FAQ
+    ├── footer.css        # Footer
+    └── responsive.css    # Media queries
 │
 ├── js/
 │   └── main.js
