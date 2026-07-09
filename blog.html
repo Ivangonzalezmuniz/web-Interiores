@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog de LUMIA Estudio - Tendencias, consejos e inspiración sobre diseño de interiores en Galicia.">
-    <title>Blog | LUMIA Estudio de Diseño Interior</title>
+    <meta name="description" content="Blog de LUME Estudio - Tendencias, consejos e inspiración sobre diseño de interiores en Galicia.">
+    <title>Blog | LUME Estudio de Diseño Interior</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
     <header class="header">
@@ -17,7 +16,7 @@
             <div class="header-top-content">
                 <div class="header-contact">
                     <a href="tel:+34933456789"><i class="fas fa-phone"></i> +34 933 456 789</a>
-                    <a href="mailto:info@lumiaestudio.com"><i class="fas fa-envelope"></i> info@lumiaestudio.com</a>
+                    <a href="mailto:info@lumeestudio.com"><i class="fas fa-envelope"></i> info@lumeestudio.com</a>
                 </div>
                 <div class="header-social">
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -33,7 +32,7 @@
                     <a href="index.html">
                         <span class="logo-icon">◆</span>
                         <div class="logo-text">
-                            <h1>LUMIA</h1>
+                            <h1>LUME</h1>
                             <span class="logo-subtitle">ESTUDIO DE DISEÑO</span>
                         </div>
                     </a>
@@ -77,35 +76,35 @@
         <div class="blog-categorias">
             <div class="section-container">
                 <div class="categorias-scroll">
-                    <a href="#" class="categoria-btn active">Todos</a>
-                    <a href="#" class="categoria-btn">Tendencias</a>
-                    <a href="#" class="categoria-btn">Consejos</a>
-                    <a href="#" class="categoria-btn">Materiales</a>
-                    <a href="#" class="categoria-btn">Estilos</a>
-                    <a href="#" class="categoria-btn">Sostenibilidad</a>
+                    <a href="#" class="categoria-btn active" data-filtro="todos">Todos</a>
+                    <a href="#" class="categoria-btn" data-filtro="tendencias">Tendencias</a>
+                    <a href="#" class="categoria-btn" data-filtro="consejos">Consejos</a>
+                    <a href="#" class="categoria-btn" data-filtro="materiales">Materiales</a>
+                    <a href="#" class="categoria-btn" data-filtro="estilos">Estilos</a>
+                    <a href="#" class="categoria-btn" data-filtro="sostenibilidad">Sostenibilidad</a>
                 </div>
             </div>
         </div>
 
         <!-- Artículo Destacado -->
-        <section class="blog-destacado-section">
+        <section class="blog-destacado-section" id="blogDestacado">
             <div class="section-container">
-                <article class="blog-destacado">
+                <article class="blog-destacado" data-categoria="consejos">
                     <div class="blog-destacado-imagen">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);">
-                            <i class="fas fa-home"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 50%, #c9a96e 100%);">
+                            <i class="fas fa-volume-up"></i>
                         </div>
-                        <span class="blog-categoria-badge">Tendencias</span>
+                        <span class="blog-categoria-badge">Consejos</span>
                     </div>
                     <div class="blog-destacado-content">
                         <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 15 Marzo, 2024</span>
-                            <span><i class="far fa-user"></i> María López</span>
-                            <span><i class="far fa-clock"></i> 5 min lectura</span>
+                            <span><i class="far fa-calendar"></i> 1 Julio, 2024</span>
+                            <span><i class="far fa-user"></i> Profesional electrónica</span>
+                            <span><i class="far fa-clock"></i> 8 min lectura</span>
                         </div>
-                        <h3>Tendencias en diseño de interiores 2024: Lo que viene este año</h3>
-                        <p>Descubre las principales tendencias que marcarán el diseño de interiores este año. Del minimalismo cálido a los materiales naturales, te contamos todo lo que necesitas saber.</p>
-                        <a href="blog/tendencias-diseno-2024.html" class="btn-leer-mas">
+                        <h3>🎧 Diseño acústico en el salón: cómo colocar los altavoces y crear un sonido equilibrado</h3>
+                        <p>Descubre cómo la acústica transforma tu salón. Guía práctica con diagramas sobre colocación de altavoces, reflexiones y configuración 5.1 para un sonido perfecto.</p>
+                        <a href="blog/acustica-salon.html" class="btn-leer-mas">
                             Leer artículo completo <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -116,9 +115,9 @@
         <!-- Grid de Artículos -->
         <section class="blog-grid-section">
             <div class="section-container">
-                <div class="blog-grid">
-                    <!-- Artículo 1 -->
-                    <article class="blog-card">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Artículo 1 - Consejos -->
+                    <article class="blog-card" data-categoria="consejos">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);">
                                 <i class="fas fa-lightbulb"></i>
@@ -138,8 +137,8 @@
                         </div>
                     </article>
 
-                    <!-- Artículo 2 -->
-                    <article class="blog-card">
+                    <!-- Artículo 2 - Sostenibilidad -->
+                    <article class="blog-card" data-categoria="sostenibilidad">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #145a32 0%, #27ae60 100%);">
                                 <i class="fas fa-leaf"></i>
@@ -159,8 +158,8 @@
                         </div>
                     </article>
 
-                    <!-- Artículo 3 -->
-                    <article class="blog-card">
+                    <!-- Artículo 3 - Estilos -->
+                    <article class="blog-card" data-categoria="estilos">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #7d6608 0%, #d4ac0d 100%);">
                                 <i class="fas fa-paint-brush"></i>
@@ -180,8 +179,8 @@
                         </div>
                     </article>
 
-                    <!-- Artículo 4 -->
-                    <article class="blog-card">
+                    <!-- Artículo 4 - Consejos -->
+                    <article class="blog-card" data-categoria="consejos">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #6c3483 0%, #a569bd 100%);">
                                 <i class="fas fa-couch"></i>
@@ -201,8 +200,8 @@
                         </div>
                     </article>
 
-                    <!-- Artículo 5 -->
-                    <article class="blog-card">
+                    <!-- Artículo 5 - Tendencias -->
+                    <article class="blog-card" data-categoria="tendencias">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #0e6655 0%, #1abc9c 100%);">
                                 <i class="fas fa-palette"></i>
@@ -222,8 +221,8 @@
                         </div>
                     </article>
 
-                    <!-- Artículo 6 -->
-                    <article class="blog-card">
+                    <!-- Artículo 6 - Materiales -->
+                    <article class="blog-card" data-categoria="materiales">
                         <div class="blog-card-imagen">
                             <div class="blog-placeholder" style="background: linear-gradient(135deg, #78281f 0%, #cb4335 100%);">
                                 <i class="fas fa-landmark"></i>
@@ -244,15 +243,6 @@
                     </article>
                 </div>
 
-                <!-- Paginación corregida -->
-                <nav class="blog-paginacion" aria-label="Paginación del blog">
-                    <a href="#" class="pagina-btn active" aria-current="page">1</a>
-                    <a href="#" class="pagina-btn">2</a>
-                    <a href="#" class="pagina-btn">3</a>
-                    <a href="#" class="pagina-btn pagina-siguiente">
-                        Siguiente <i class="fas fa-chevron-right"></i>
-                    </a>
-                </nav>
             </div>
         </section>
 
@@ -283,7 +273,7 @@
                     <a href="index.html">
                         <span class="logo-icon">◆</span>
                         <div class="logo-text">
-                            <h1>LUMIA</h1>
+                            <h1>LUME</h1>
                             <span class="logo-subtitle">ESTUDIO DE DISEÑO</span>
                         </div>
                     </a>
@@ -311,7 +301,7 @@
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> Rúa do Deseño, 123<br>15701 Santiago de Compostela</li>
                     <li><i class="fas fa-phone"></i> <a href="tel:+34933456789">+34 933 456 789</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@lumiaestudio.com">info@lumiaestudio.com</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@lumeestudio.com">info@lumeestudio.com</a></li>
                 </ul>
             </div>
             
@@ -327,7 +317,7 @@
         
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p>&copy; 2024 LUMIA Estudio de Diseño. Todos los derechos reservados.</p>
+                <p>&copy; 2024 LUME Estudio de Diseño. Todos los derechos reservados.</p>
                 <div class="footer-legal">
                     <a href="#">Aviso legal</a>
                     <a href="#">Política de privacidad</a>
@@ -338,5 +328,70 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- Script del filtro del blog -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoriaBtns = document.querySelectorAll('.categoria-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const blogDestacado = document.querySelector('.blog-destacado');
+        
+        categoriaBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Quitar active de todos los botones
+                categoriaBtns.forEach(b => b.classList.remove('active'));
+                // Activar el botón clickeado
+                this.classList.add('active');
+                
+                // Obtener el filtro del atributo data-filtro
+                const filtro = this.getAttribute('data-filtro');
+                
+                // Si es "todos", mostrar todo incluido el destacado
+                if (filtro === 'todos') {
+                    if (blogDestacado) {
+                        blogDestacado.closest('.blog-destacado-section').style.display = 'block';
+                    }
+                    blogCards.forEach(card => {
+                        card.style.display = 'flex';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    });
+                    return;
+                }
+                
+                // Filtrar destacado
+                if (blogDestacado) {
+                    const destacadoCategoria = blogDestacado.getAttribute('data-categoria');
+                    if (destacadoCategoria === filtro) {
+                        blogDestacado.closest('.blog-destacado-section').style.display = 'block';
+                    } else {
+                        blogDestacado.closest('.blog-destacado-section').style.display = 'none';
+                    }
+                }
+                
+                // Filtrar tarjetas
+                blogCards.forEach(card => {
+                    const categoria = card.getAttribute('data-categoria');
+                    
+                    if (categoria === filtro) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>

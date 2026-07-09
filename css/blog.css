@@ -511,3 +511,45 @@
     font-size: 0.85rem;
     color: var(--text-lighter);
 }
+/* Estilos para diagramas SVG en artículos */
+.articulo-diagrama {
+    background: var(--white);
+    border: 1px solid #e8e4dd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.articulo-diagrama h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.articulo-diagrama svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Listas dentro del artículo */
+.articulo-cuerpo ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    color: var(--text-light);
+    line-height: 2;
+}
+
+.articulo-cuerpo ul li {
+    margin-bottom: 0.5rem;
+}
+
+.articulo-cuerpo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 2rem 0 0.8rem;
+}
