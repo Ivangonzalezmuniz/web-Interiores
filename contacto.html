@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con LUMIA Estudio de Diseño Interior. Solicita tu consultoría gratuita y transforma tu espacio.">
+    <title>Contacto | LUMIA Estudio de Diseño Interior</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="header-contact">
+                    <a href="tel:+34933456789"><i class="fas fa-phone"></i> +34 933 456 789</a>
+                    <a href="mailto:info@lumiaestudio.com"><i class="fas fa-envelope"></i> info@lumiaestudio.com</a>
+                </div>
+                <div class="header-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">◆</span>
+                        <div class="logo-text">
+                            <h1>LUMIA</h1>
+                            <span class="logo-subtitle">ESTUDIO DE DISEÑO</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                    <li class="nav-cta">
+                        <a href="contacto.html" class="btn-nav">Solicitar consultoría</a>
+                    </li>
+                </ul>
+                
+                <button class="hamburger" aria-label="Menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero de Contacto -->
+        <section class="contacto-hero">
+            <div class="section-container">
+                <div class="contacto-hero-content">
+                    <span class="section-tag">Contacto</span>
+                    <h2>Hablemos de tu proyecto</h2>
+                    <p>Cuéntanos tu idea y te ayudaremos a hacerla realidad. Primera consulta gratuita.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Principal de Contacto -->
+        <section class="contacto-principal">
+            <div class="section-container">
+                <div class="contacto-wrapper">
+                    <!-- Formulario -->
+                    <div class="contacto-formulario">
+                        <div class="formulario-header">
+                            <h3>Solicita información</h3>
+                            <p>Completa el formulario y te contactaremos en menos de 24 horas</p>
+                        </div>
+                        
+                        <form class="form-contacto" id="formContacto">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre completo *</label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="María García">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row form-row-double">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required placeholder="maria@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row form-row-double">
+                                <div class="form-group">
+                                    <label for="tipo-proyecto">Tipo de proyecto *</label>
+                                    <select id="tipo-proyecto" name="tipo-proyecto" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="residencial">Residencial</option>
+                                        <option value="comercial">Comercial</option>
+                                        <option value="reforma">Reforma integral</option>
+                                        <option value="consultoria">Consultoría</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="presupuesto">Presupuesto estimado</label>
+                                    <select id="presupuesto" name="presupuesto">
+                                        <option value="">Selecciona un rango</option>
+                                        <option value="menos-10k">Menos de 10.000€</option>
+                                        <option value="10k-30k">10.000€ - 30.000€</option>
+                                        <option value="30k-60k">30.000€ - 60.000€</option>
+                                        <option value="60k-100k">60.000€ - 100.000€</option>
+                                        <option value="mas-100k">Más de 100.000€</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">Cuéntanos tu proyecto *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe tu proyecto, necesidades, plazos, estilo deseado..."></textarea>
+                            </div>
+                            
+                            <div class="form-group form-checkbox">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="privacidad" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos *</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group form-checkbox">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Deseo recibir novedades y tendencias de diseño</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-enviar">
+                                <span>Enviar mensaje</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Información de Contacto -->
+                    <div class="contacto-sidebar">
+                        <!-- Tarjeta de Información -->
+                        <div class="sidebar-card info-card">
+                            <h3>Información de contacto</h3>
+                            
+                            <div class="info-item">
+                                <div class="info-icon-circle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Dirección</h4>
+                                    <p>Calle del Diseño, 123<br>08008 Barcelona, España</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon-circle">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Teléfono</h4>
+                                    <a href="tel:+34933456789">+34 933 456 789</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon-circle">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:info@lumiaestudio.com">info@lumiaestudio.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon-circle">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-details">
+                                    <h4>Horario</h4>
+                                    <p>Lunes a Viernes: 9:00 - 19:00<br>Sábados: 10:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta de Redes Sociales -->
+                        <div class="sidebar-card social-card">
+                            <h3>Síguenos</h3>
+                            <p>Inspírate con nuestros proyectos</p>
+                            <div class="sidebar-social-links">
+                                <a href="#" class="social-link-item">
+                                    <i class="fab fa-instagram"></i>
+                                    <div>
+                                        <strong>Instagram</strong>
+                                        <span>@lumiaestudio</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-link-item">
+                                    <i class="fab fa-pinterest"></i>
+                                    <div>
+                                        <strong>Pinterest</strong>
+                                        <span>Inspiración diaria</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-link-item">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <div>
+                                        <strong>LinkedIn</strong>
+                                        <span>Conecta con nosotros</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección FAQ -->
+        <section class="faq-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">FAQ</span>
+                    <h3>Preguntas frecuentes</h3>
+                    <p>Respuestas a las dudas más comunes</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cuánto cuesta un proyecto de diseño interior?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El coste varía según el alcance del proyecto. Ofrecemos una primera consulta gratuita donde evaluamos tus necesidades y te proporcionamos un presupuesto detallado y personalizado sin compromiso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cuánto tiempo dura una reforma integral?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dependiendo de la magnitud, una reforma integral puede durar entre 2 y 6 meses. Te proporcionamos un cronograma detallado antes de comenzar el proyecto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Trabajáis fuera de Barcelona?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, realizamos proyectos en toda España. Contamos con equipos en Barcelona, Madrid y Valencia, y podemos desplazarnos a otras ciudades según el proyecto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué incluye el servicio de diseño interior?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nuestro servicio incluye: visita inicial, propuesta de diseño con renders 3D, planos detallados, selección de materiales y acabados, coordinación de obra y styling final.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Ofrecéis garantía en vuestros trabajos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, todos nuestros proyectos cuentan con garantía por escrito. Además, ofrecemos servicio post-venta para asegurarnos de que todo funcione perfectamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="cta-final">
+            <div class="section-container">
+                <div class="cta-content">
+                    <h3>¿Prefieres que te llamemos?</h3>
+                    <p>Déjanos tu número y te contactamos en el horario que prefieras</p>
+                    <a href="tel:+34933456789" class="btn-primary">
+                        <i class="fas fa-phone"></i>
+                        <span>+34 933 456 789</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">◆</span>
+                        <div class="logo-text">
+                            <h1>LUMIA</h1>
+                            <span class="logo-subtitle">ESTUDIO DE DISEÑO</span>
+                        </div>
+                    </a>
+                </div>
+                <p>Transformando espacios en experiencias desde 2010. Diseño de interiores de lujo en Barcelona, Madrid y Valencia.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle del Diseño, 123<br>08008 Barcelona</li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+34933456789">+34 933 456 789</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@lumiaestudio.com">info@lumiaestudio.com</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Recibe nuestras novedades y tendencias en diseño</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 LUMIA Estudio de Diseño. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+        
+        // Formulario
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo en menos de 24 horas.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
